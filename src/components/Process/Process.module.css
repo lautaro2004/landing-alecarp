@@ -1,22 +1,112 @@
-.process_container{
+.process_container {
     width: 85%;
     height: 100%;
     margin: 0 auto;
     padding-top: 4rem;
-    .process_header{
-        width: 100%;
+  
+    .process_header {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .title {
+        padding-bottom: 1rem;
+  
+        & h3 {
+          font-size: 56px;
+          color: #3d405b;
+          font-weight: 700;
+          line-height: 1.0;
+          text-align: left;
+        }
+      }
+    }
+  
+    /* Wrapper del slider */
+    .slider_wrapper {
+      width: 100%;
+      overflow: hidden; /* Evitar que se vean los elementos fuera del contenedor */
+      position: relative; /* Necesario para posicionar flechas */
+      border-top: 3px solid #3d405b;
+    }
+  
+    /* Contenedor del slider */
+    .slider {
+      display: flex; /* Para habilitar scroll horizontal */
+      gap: 2.5rem; /* Espacio entre las slides */
+      transition: transform 0.5s ease-in-out; /* Suavidad del movimiento */
+    }
+  
+    .process_item {
+      flex: 0 0 45%; /* Cada slide ocupa el 33% del ancho total */
+      display: flex;
+      flex-direction: column;
+  
+      .item_header {
+        width: auto;
         height: auto;
         display: flex;
-        justify-content: space-between;
+        text-align: left;
+        justify-content: flex-start;
         align-items: center;
-        .title{
-            & h3{
-                font-size: 56px;
-                color: #3D405B;
-                font-weight: 700;
-                line-height: 1.0;
-                text-align: left;
-            }
+        border-bottom: 3px solid #3d405b;
+  
+        & h2 {
+          font-size: 36px;
+          font-weight: 700;
+          color: #3d405b;
         }
+  
+        .title {
+          width: 45%;
+  
+          & h3 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #3d405b;
+            text-align: left;
+            line-height: 0.8;
+            padding: 1rem;
+          }
+        }
+      }
+  
+      .item_content {
+        padding: 1.5rem 0rem 1.5rem 0rem;
+        & p {
+          font-size: 24px;
+          text-align: left;
+          line-height: 1.0;
+          color: #3d405b;
+        }
+      }
     }
-}
+  
+    /* Flechas para el slider */
+    .process_arrow {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      border-top: 3px solid #3d405b;
+      border-bottom: 3px solid #3d405b;
+  
+      .arrow {
+        color: #3d405b;
+        border: none;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        cursor: pointer;
+        pointer-events: auto; /* Activar interacción */
+        transition: opacity 0.3s;
+        font-size: 32px;
+  
+        &:disabled {
+          opacity: 0; /* Desactivar flechas cuando no son necesarias */
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  

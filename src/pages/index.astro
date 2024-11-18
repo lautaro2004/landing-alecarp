@@ -1,6 +1,7 @@
 ---
+import Contact from '../components/Contact/Contact.astro';
 import Hero from '../components/Hero/Hero.astro';
-import Process from '../components/Process/Process.astro';
+import Process from '../components/Process/Process';
 import Projects from '../components/Projects/Projects.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -9,6 +10,7 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<Hero />
 		<Projects />
-		<Process />
+		<Process client:visible/>
+		<Contact />
 	</main>
 </Layout>

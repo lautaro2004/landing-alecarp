@@ -1,0 +1,38 @@
+.contact_container{
+    width: 85%;
+    height: 100%;
+    border-left: 3px solid #3d405b;
+    margin: 0 auto;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text_container{
+        width: 45%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        text-align: left;
+        gap: 1rem;
+        & h4{
+            font-size: 32px;
+            font-weight: 700;
+            color: #3d405b;
+        }
+        & p{
+            font-size: 30px;
+            font-weight: 500;
+            color: #3d405b;
+            line-height: 0.9;
+        }
+    }
+    .form_container{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

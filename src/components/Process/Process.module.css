@@ -1,0 +1,22 @@
+.process_container{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    .process_header{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title{
+            & h3{
+                font-size: 56px;
+                color: #3D405B;
+                font-weight: 700;
+                line-height: 1.0;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+---
+import Image from "astro/components/Image.astro";
+import styles from "./Hero.module.css";
+import logo from "../../assets/logos/logo-alecarp.png";
+import hero1 from "../../assets/hero/hero-1.jpg";
+import hero2 from "../../assets/hero/hero-2.jpg";
+import hero3 from "../../assets/hero/hero-3.jpg";
+---
+
+<div class={styles.hero_container}>
+    <div class={styles.hero_header}>
+        <div class={styles.hero_title}>
+            <h1>
+                ALECARP
+            </h1>
+            <Image src={logo} alt="Logo de alecarp"></Image>
+        </div>
+        <div class={styles.hero__tagline}>
+            <p>
+                CALIDAD Y DISEÑO PARA CADA ESPACIO
+            </p>
+        </div>
+    </div>
+    <div class={styles.hero_images}>
+        <div class={styles.image_item1}>
+            <Image src={hero1} alt="imagen del hero"></Image>
+        </div>
+        <div class={styles.image_item2}>
+            <Image src={hero2} alt="imagen del hero"></Image>
+        </div>
+        <div class={styles.image_item3}>
+            <Image src={hero3} alt="imagen del hero"></Image>
+        </div>
+    </div>
+    <div class={styles.hero_text}>
+        <div class={styles.text_container}>
+            <h3>
+                CONVERTIMOS TUS DISEÑOS EN <br/> REALIDAD
+            </h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+.hero_container{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    .hero_header{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .hero_title{
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            & h1{
+                font-family: "Audiowide", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 128px;
+                color: #3D405B;
+            }
+        }
+        .hero__tagline{
+            width: 25%;
+            height: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            & p{
+                text-align: right;
+                font-size: 32px;
+                font-weight: 600;
+                color: #3D405B;
+                margin-top: -2.5rem;
+                line-height: 1.0;
+            }
+        }
+    }
+    .hero_images{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        .image_item1{
+            width: 35%;
+            & img{
+                width: 100%;
+                height: 520px;
+                border-radius: 5px;
+            }
+        }
+        .image_item2{
+            width: 45%;
+            & img{
+                width: 100%;
+                height: 520px;
+                border-radius: 5px;
+            }
+        }
+        .image_item3{
+            width: 25%;
+            & img{
+                width: 100%;
+                height: 520px;
+                border-radius: 5px;
+            }
+        }
+    }
+    .hero_text{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 3px solid #3D405B;
+        & h3{
+            text-align: right;
+            font-size: 56px;
+            color: #3D405B;
+            font-weight: 700;
+            line-height: 1.0;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    @media(max-width: 1550px){
+        .hero_images{
+            .image_item1, .image_item2, .image_item3{
+                & img{
+                    height: 420px;
+                }
+            }
+        }
+    }
+}

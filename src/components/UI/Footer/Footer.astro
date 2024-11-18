@@ -1,0 +1,40 @@
+---
+import styles from "./Footer.module.css";
+import Image from "astro/components/Image.astro";
+import digitize from "../../../assets/logos/logo-digitize.png"
+import ig from "../../../assets/socials/instagram-icon.png"
+import face from "../../../assets/socials/facebook-icon.png"
+---
+
+<footer class={styles.footer_container}>
+    <div class={styles.content_container}>
+        <div class={styles.links_container}>
+            <a href="#">
+                INICIO
+            </a>
+            <a href="#">
+                PROYECTOS
+            </a>
+            <a href="#">
+                PROCESO
+            </a>
+        </div>
+        <div class={styles.copy_container}>
+            <div class={styles.copy_item}>
+                <p>Designed and developed by</p><Image src={digitize} alt="Logo de digitize"></Image>
+            </div>
+        </div>
+        <div class={styles.socials_container}>
+            <a href="#link-ig" class={styles.socials_item}>
+                <button>
+                    <Image src={ig} alt="Logo de instagram"></Image>
+                </button>
+            </a>
+            <a href="#link-ig" class={styles.socials_item}>
+                <button>
+                    <Image src={face} alt="Logo de facebook"></Image>
+                </button>
+            </a>
+        </div>
+    </div>
+</footer>

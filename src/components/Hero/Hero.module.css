@@ -2,6 +2,7 @@
     width: 85%;
     height: 100%;
     margin: 0 auto;
+    padding-top: 5rem;
     .hero_header{
         width: 100%;
         height: auto;
@@ -22,7 +23,7 @@
                 color: #3D405B;
             }
         }
-        .hero__tagline{
+        .hero_tagline{
             width: 25%;
             height: auto;
             display: flex;
@@ -94,6 +95,48 @@
                 & img{
                     height: 420px;
                 }
+            }
+        }
+    }
+    @media(max-width:960px){
+        .hero_header{
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            .hero_title{
+                width: 100%;
+                justify-content: space-between;
+                & h1{
+                    font-size: 46px;
+                }
+                & img{
+                    width: auto;
+                    height: 80px;
+                    margin-right: -1rem;
+                }
+            }
+            .hero_tagline{
+                width: 100%;
+                height: auto;
+                align-items: center;
+                justify-content: flex-end;
+                margin-top: 0rem;
+                & p{
+                    font-size: 26px;
+                }
+            }
+        }
+        .hero_images{
+            margin-top: 0.5rem;
+            .image_item1, .image_item2, .image_item3{
+                & img{
+                    height: 250px;
+                }
+            }
+        }
+        .hero_text{
+            & h3{
+                font-size: 26px;
             }
         }
     }

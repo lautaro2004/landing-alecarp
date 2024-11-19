@@ -60,7 +60,7 @@
         }
   
         .title {
-          width: 45%;
+          width: 40%;
   
           & h3 {
             font-size: 36px;
@@ -105,6 +105,26 @@
         &:disabled {
           opacity: 0; /* Desactivar flechas cuando no son necesarias */
           pointer-events: none;
+        }
+      }
+    }
+    @media(max-width: 960px){
+      .process_header{
+        .title{
+          & h3{
+            font-size: 32px;
+          }
+        }
+      }
+      .process_item{
+        flex: 0 0 75%;
+        .item_header{
+          .title{
+            width: 80%;
+            & h3{
+              font-size: 26px;
+            }
+          }
         }
       }
     }

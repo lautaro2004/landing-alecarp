@@ -83,4 +83,21 @@
   .submit_button:hover {
     background-color: #3D405B;
   }
+
+  @media(max-width:960px) {
+    .contact_form{
+      .doble_input{
+        width: 100%;
+        justify-content: center;
+        .form_input{
+           width: 100%;
+           font-size: 18px;
+         }
+ 
+      }
+      .simple_input{
+        width: 100%;
+      }
+    }
+  }
   

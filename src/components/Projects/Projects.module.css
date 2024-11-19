@@ -67,4 +67,26 @@
             background-image: url("../../assets/projects/project-6.jpg");
         }
     }
+    @media(max-width: 960px){
+        .projects_header{
+            .title{
+                & h3{
+                    font-size: 32px;
+                }
+            }
+            .exp{
+                & h3{
+                    font-size: 26px;
+                }
+            }
+        }
+        .projects_images{
+            .project_image1, .project_image2, .project_image3, .project_image4, .project_image5, .project_image6{
+                width: 100%;
+                justify-content: space-between;
+                height: 300px;
+                gap: 5px;
+            }
+        }
+    }
 }

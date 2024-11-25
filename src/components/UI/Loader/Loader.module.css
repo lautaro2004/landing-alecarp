@@ -58,4 +58,16 @@
       height: 100px;
     }
   }
+  @media(max-width:960px){
+    .left_container{
+      & h1{
+        font-size: 46px;
+      }
+    }
+    .right_container{
+      & h1{
+        font-size: 46px;
+      }
+    }
+  }
 }

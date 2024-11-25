@@ -81,14 +81,14 @@ const Process = () => {
             onClick={() => handleSlide(-1)}
             disabled={currentIndex === 0}
           >
-            <img src="./public/arrow-l.svg" alt="Flecha izquierda" />
+            <img src="/arrow-l.svg" alt="Flecha izquierda" />
           </button>
           <button
             className={`${styles.arrow} ${styles.arrow_right}`}
             onClick={() => handleSlide(1)}
             disabled={currentIndex === itemsRef.current.length - 1}
           >
-            <img src="./public/arrow-r.svg" alt="Flecha derecha" />
+            <img src="/arrow-r.svg" alt="Flecha derecha" />
           </button>
         </div>
       </div>

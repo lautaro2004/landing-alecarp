@@ -1,103 +1,151 @@
 .contact_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text_container h4 {
+  font-size: 32px;
+  color: #3D405B;
+}
+
+.text_container p {
+  font-size: 18px;
+  color: #3D405B;
+}
+
+.form_container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.doble_input {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.form_input {
+  width: 240px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #3D405B;
+  outline: none;
+}
+
+.simple_input {
+  width: 100%;
+}
+
+.form_textarea {
+  width: 100%;
+  height: auto;
+  min-height: 130px;
+  resize: none;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #3D405B;
+  outline: none;
+}
+
+.form_input::placeholder,
+.form_textarea::placeholder {
+  color: #888;
+}
+
+.submit_button {
+  padding: 12px 20px;
+  background-color: #3D405B;
+  color: #F4F6FF;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit_button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit_button:hover {
+  background-color: #2c2f47;
+}
+
+.success_button {
+  background-color: #28a745;
+  color: white;
+}
+
+.success_message {
+  color: #28a745;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.loader {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite ;
+}
+
+@keyframes rotate {
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+@media (max-width: 960px) {
+  .contact_form .doble_input {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
-  
-  .text_container {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .text_container h4 {
-    font-size: 32px;
-    color: #3D405B;
-  }
-  
-  .text_container p {
+
+  .contact_form .doble_input .form_input {
+    width: 100%;
     font-size: 18px;
-    color: #3D405B;
-  }
-  
-  .form_container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact_form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    .doble_input{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 5px;
-        .form_input{
-           width: 240px;
-           font-size: 20px;
-           padding: 10px;
-           border-radius: 5px;
-           border: 1px solid #3D405B;
-           outline: none;
-        }
-    }
-    .simple_input{
-        width: 100%;
-    }
-    .form_textarea{
-        width: 100%;
-        height: auto;
-        min-height: 130px;
-        resize: none;
-        font-size: 20px;
-        border-radius: 5px;
-        border: 1px solid #3D405B;
-        outline: none;
-    }
-  }
-  
-  .form_input::placeholder,
-  .form_textarea::placeholder {
-    color: #888;
-  }
-  
-  .submit_button {
-    padding: 12px 20px;
-    background-color: #3D405B;
-    color: #F4F6FF;
-    border: none;
-    border-radius: 4px;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit_button:hover {
-    background-color: #3D405B;
   }
 
-  @media(max-width:960px) {
-    .contact_form{
-      .doble_input{
-        width: 100%;
-        justify-content: center;
-        .form_input{
-           width: 100%;
-           font-size: 18px;
-         }
- 
-      }
-      .simple_input{
-        width: 100%;
-      }
-    }
+  .simple_input {
+    width: 100%;
   }
-  
+}

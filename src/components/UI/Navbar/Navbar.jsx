@@ -46,14 +46,14 @@ const Navbar = () => {
             menuOpen ? styles.show_menu : ""
           }`}
         >
-          <a href="#">INICIO</a>
-          <a href="#">PROYECTOS</a>
-          <a href="#">PROCESO</a>
+          <a href="#inicio">INICIO</a>
+          <a href="#proyectos">PROYECTOS</a>
+          <a href="#proceso">PROCESO</a>
         </div>
 
         {/* Botón de contacto (siempre visible en desktop y mobile) */}
         <div className={styles.contact_container}>
-          <a className={styles.contact_button} href="#">
+          <a className={styles.contact_button} href="#contacto">
             <button>CONTACTO</button>
           </a>
         </div>
@@ -66,13 +66,13 @@ const Navbar = () => {
           menuOpen ? styles.side_menu_open : ""
         }`}
       >
-        <a href="#" onClick={() => setMenuOpen(false)}>
+        <a href="#inicio" onClick={() => setMenuOpen(false)}>
           INICIO
         </a>
-        <a href="#" onClick={() => setMenuOpen(false)}>
+        <a href="#proyectos" onClick={() => setMenuOpen(false)}>
           PROYECTOS
         </a>
-        <a href="#" onClick={() => setMenuOpen(false)}>
+        <a href="#proceso" onClick={() => setMenuOpen(false)}>
           PROCESO
         </a>
       </div>

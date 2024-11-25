@@ -30,18 +30,14 @@ const Process = () => {
   };
 
   return (
-    <div className={styles.process_container}>
-      {/* Título del slider */}
+    <div className={styles.process_container} id="proceso">
       <div className={styles.process_header}>
         <div className={styles.title}>
           <h3>PROCESO</h3>
         </div>
       </div>
-
-      {/* Contenedor del slider */}
       <div className={styles.slider_wrapper}>
         <div className={styles.slider} ref={sliderRef}>
-          {/* Elementos del slider */}
           {[
             {
               id: 1,
@@ -79,22 +75,20 @@ const Process = () => {
             </div>
           ))}
         </div>
-
-        {/* Flechas de navegación */}
         <div className={styles.process_arrow}>
           <button
             className={`${styles.arrow} ${styles.arrow_left}`}
             onClick={() => handleSlide(-1)}
             disabled={currentIndex === 0}
           >
-            &larr;
+            <img src="./public/arrow-l.svg" alt="Flecha izquierda" />
           </button>
           <button
             className={`${styles.arrow} ${styles.arrow_right}`}
             onClick={() => handleSlide(1)}
             disabled={currentIndex === itemsRef.current.length - 1}
           >
-            &rarr;
+            <img src="./public/arrow-r.svg" alt="Flecha derecha" />
           </button>
         </div>
       </div>

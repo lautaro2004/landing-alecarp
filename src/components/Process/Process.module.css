@@ -94,13 +94,17 @@
       border-bottom: 3px solid #3d405b;
   
       .arrow {
+        width: auto;
+        height: 60px;
         color: #3d405b;
         border: none;
-        padding: 0.5rem 0rem 0.5rem 0rem;
+        background-color: transparent;
         cursor: pointer;
-        pointer-events: auto; /* Activar interacción */
+        pointer-events: auto;
         transition: opacity 0.3s;
         font-size: 32px;
+        display: flex;
+        align-items: center;
   
         &:disabled {
           opacity: 0; /* Desactivar flechas cuando no son necesarias */

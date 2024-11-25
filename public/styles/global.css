@@ -1,8 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #F4F6FF;
     font-family: "Darker Grotesque", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F4F6FF;
 }

@@ -3,7 +3,7 @@ import styles from "./Contact.module.css";
 import ContactForm from "./Form/ContactForm"
 ---
 
-<div class={styles.contact_container}>
+<div class={styles.contact_container} id="contacto">
     <div class={styles.text_container}>
         <h4>
             ¿Listo para darle vida a tus ideas?
@@ -13,6 +13,6 @@ import ContactForm from "./Form/ContactForm"
         </p>
     </div>
     <div class={styles.form_container}>
-        <ContactForm />
+        <ContactForm client:visible/>
     </div>
 </div>

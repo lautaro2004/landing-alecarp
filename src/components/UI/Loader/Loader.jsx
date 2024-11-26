@@ -64,7 +64,7 @@ const Loader = () => {
         zIndex: isActive ? 999 : 0,
         opacity: isActive ? 1 : 0,
         pointerEvents: isActive ? 'auto' : 'none',
-        transition: 'opacity 0.5s ease, z-index 0.5s ease', // Transición suave
+        transition: 'opacity 0.5s ease, z-index 0.5s ease',
       }}
     >
       <div className={`${styles.left_container} left_container`}>

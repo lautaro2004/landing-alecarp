@@ -71,11 +71,19 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    transition: 0.3s;
+                    cursor: pointer;
                     & img{
                         height:35px;
                         width:auto;
                         background-color: transparent;
                     }
+                }
+            }
+            .socials_item:hover{
+                & button{
+                    background-color: #575970;
+                    transition: 0.3s;
                 }
             }
         }

@@ -14,7 +14,7 @@
     justify-content: flex-end;
     align-items: center;
     z-index: 50;
-    background-color: #262731;
+    background-color: #81b29a;
 
     & h1 {
       font-family: "Audiowide", sans-serif;
@@ -32,7 +32,7 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 50;
-    background-color: #262731;
+    background-color: #81b29a;
 
     & h1 {
       font-family: "Audiowide", sans-serif;
@@ -44,7 +44,7 @@
 
     & img {
       width: auto;
-      height: 100px;
+      height: 120px;
     }
   }
 

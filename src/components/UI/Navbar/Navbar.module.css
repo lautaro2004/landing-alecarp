@@ -48,14 +48,14 @@
     color: #f4f6ff;
     font-size: 24px;
     font-weight: bold;
-    background-color: #3d405b;
+    background-color: #81b29a;
     border: none;
     transition: 0.3s;
     cursor: pointer;
   }
   
   .contact_container button:hover {
-    background-color: #282b41;
+    background-color: #5d8170;
     transition: 0.3s;
   }
   

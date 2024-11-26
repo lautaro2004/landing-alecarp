@@ -71,6 +71,9 @@
             }
         }
     }
+    .hero_images_mobile{
+        display: none;
+    }
     .hero_text{
         width: 100%;
         height: auto;
@@ -127,12 +130,15 @@
             }
         }
         .hero_images{
-            margin-top: 0.5rem;
-            .image_item1, .image_item2, .image_item3{
-                & img{
-                    height: 250px;
-                }
-            }
+            display: none;
+        }
+        .hero_images_mobile{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
         }
         .hero_text{
             & h3{

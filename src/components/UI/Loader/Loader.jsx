@@ -27,13 +27,13 @@ const Loader = () => {
     }, 1);
 
     loaderTimeline.to('.left_container', {
-      borderRight: '1px solid rgba(0, 0, 0, 1)',
+      borderRight: '1px solid #dad7cd',
       duration: 0.5,
       ease: 'power1.inOut',
     }, '<');
 
     loaderTimeline.to('.right_container', {
-      borderLeft: '1px solid rgba(0, 0, 0, 1)',
+      borderLeft: '1px solid #dad7cd',
       duration: 0.5,
       ease: 'power1.inOut',
     }, '<');

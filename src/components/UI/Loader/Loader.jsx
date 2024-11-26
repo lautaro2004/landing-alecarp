@@ -27,16 +27,16 @@ const Loader = () => {
     }, 1);
 
     loaderTimeline.to('.left_container', {
-      borderRight: '1px solid #dad7cd',
+      borderRightColor: '#dad7cd',
       duration: 0.5,
       ease: 'power1.inOut',
     }, '<');
-
+    
     loaderTimeline.to('.right_container', {
-      borderLeft: '1px solid #dad7cd',
+      borderLeftColor: '#dad7cd',
       duration: 0.5,
       ease: 'power1.inOut',
-    }, '<');
+    }, '<');    
 
     loaderTimeline.to('.sierra', {
       opacity: 0,

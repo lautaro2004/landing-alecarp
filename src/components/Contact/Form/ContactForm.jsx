@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ContactForm.module.css";
 import axios from "axios";
 
@@ -11,19 +11,54 @@ const ContactForm = () => {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneRegex = /^\d{10}$/; // Exactamente 10 dígitos
+    return phoneRegex.test(phoneNumber);
+  };
+
+  const validateMinLength = (value) => {
+    return value.trim().length >= 4;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validar campos vacíos
     const { fullName, phoneNumber, email, furnitureType, message } = formData;
+
+    // Validaciones
     if (!fullName || !phoneNumber || !email || !furnitureType || !message) {
       alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Por favor, ingresa un email válido.");
+      return;
+    }
+
+    if (!validatePhoneNumber(phoneNumber)) {
+      alert("El número de teléfono debe contener exactamente 10 dígitos.");
+      return;
+    }
+
+    if (
+      !validateMinLength(fullName) ||
+      !validateMinLength(furnitureType) ||
+      !validateMinLength(message)
+    ) {
+      alert("Todos los campos deben contener al menos 4 caracteres.");
       return;
     }
 
@@ -43,7 +78,7 @@ const ContactForm = () => {
       );
       console.log("Formulario enviado con éxito:", response);
       alert("Formulario enviado con éxito");
-      
+
       // Reiniciar los valores del formulario
       setFormData({
         fullName: "",
@@ -52,6 +87,10 @@ const ContactForm = () => {
         furnitureType: "",
         message: "",
       });
+
+      // Deshabilitar botón por 15 minutos
+      setIsButtonDisabled(true);
+      setTimeout(() => setIsButtonDisabled(false), 15 * 60 * 1000);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
       alert("Hubo un problema al enviar el formulario. Inténtalo nuevamente.");
@@ -111,11 +150,16 @@ const ContactForm = () => {
           </div>
           <button
             className={styles.submit_button}
-            disabled={isLoading}
+            disabled={isLoading || isButtonDisabled}
             onClick={handleSubmit}
           >
             {isLoading ? <span className={styles.loader}></span> : "HACER REALIDAD MI DISEÑO"}
           </button>
+          {isButtonDisabled && (
+            <p className={styles.disabled_message}>
+              El formulario se puede enviar nuevamente en 15 minutos.
+            </p>
+          )}
         </div>
       </div>
     </div>
